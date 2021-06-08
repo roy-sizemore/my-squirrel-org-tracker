@@ -3,7 +3,7 @@ CREATE DATABASE employees;
 
 use employees;
 
-CREATE TABLE org (
+CREATE TABLE department (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50) NOT NULL
 );
