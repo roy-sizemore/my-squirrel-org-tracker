@@ -1,0 +1,24 @@
+{
+  "name": "my-squirrel-org-tracker",
+  "version": "1.0.0",
+  "description": "My SQquirreL Org Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roy-sizemore/my-squirrel-org-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roy-sizemore/my-squirrel-org-tracker/issues"
+  },
+  "homepage": "https://github.com/roy-sizemore/my-squirrel-org-tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0",
+    "mysql2": "^2.2.5"
+  }
+}
