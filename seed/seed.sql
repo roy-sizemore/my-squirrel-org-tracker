@@ -5,7 +5,7 @@ INSERT INTO department
 VALUES
     ('Information Technology'),
     ('Software Development'),
-    ('Cybersecurity & Technology Risk'),
+    ('Cybersecurity & Technology Risk');
 
 INSERT INTO role
     (title, salary, department_id)
@@ -15,7 +15,7 @@ VALUES
     ('Senior Full Stack Developer', 110000, 2),
     ('Full Stack Developer', 80000, 2),
     ('CISO', 180000, 3),
-    ('Information Risk Manager', 127000, 3),
+    ('Information Risk Manager', 127000, 3);
 
 INSERT INTO employees
     (first_name, last_name, role_id, manager_id)
@@ -25,4 +25,4 @@ VALUES
     ('Meredith', 'Farrar', 3, NULL),
     ('Robert', 'Neal', 4, 3),
     ('Nathan', 'Buker', 5, NULL),
-    ('Craig', 'Kohler', 6, 5)
+    ('Craig', 'Kohler', 6, 5);

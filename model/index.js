@@ -1,6 +1,5 @@
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 const connection = require('../config/connection');
-const db = require('../db');
 const menu = require('../index');
 require('console.table');
 
@@ -11,7 +10,7 @@ class Org {
 
     // Employee query functions
     // Create a new employee
-    createEmployee(employee) {
+    createEmployee() {
         const employee = inquirer.prompt([
             {
               name: 'first_name',
@@ -70,7 +69,7 @@ class Org {
     };
 
     // Updates employee's role
-    updateEmployeeRoleById(employeeId, roleId) {
+    updateEmployeeRoleById() {
         const allEmployees = selectAllEmployees();
 
         const employee = allEmployees.map(({ id, first_name, last_name }) => ({
@@ -108,7 +107,7 @@ class Org {
     };
     
     // Updates employee's manager by employee ID and manager ID
-    updateEmployeeManagerByIds(employeeId, managerId) {
+    updateEmployeeManagerByIds() {
         const allEmployees = selectAllEmployees();
 
         const employee = allEmployees.map(({ id, first_name, last_name }) => ({
@@ -146,7 +145,7 @@ class Org {
     };
 
     // Delete's an employee by their ID
-    deleteEmployeeById(employeeId) {
+    deleteEmployeeById() {
         const allEmployees = selectAllEmployees();
 
         const employee = allEmployees.map(({ id, first_name, last_name }) => ({
@@ -169,7 +168,7 @@ class Org {
 
     // Role query functions
     // Creates a new role
-    createRole(role) {
+    createRole() {
         const allDepartments = selectAllDepartments();
 
         const department = allDepartments.map(({ id, name }) => ({
@@ -212,7 +211,7 @@ class Org {
     };
 
     // Deletes a role by ID
-    deleteRoleById(roleId) {
+    deleteRoleById() {
         const allRoles = selectAllRoles();
 
         const role = allRoles.map(({ id, title }) => ({
@@ -220,7 +219,7 @@ class Org {
           value: id
         }));
       
-        const { roleId } = await prompt([
+        const { roleId } = inquirer.prompt([
           {
             name: 'roleId',
             message: 'Please select a role to remove: ',
@@ -246,7 +245,7 @@ class Org {
     };
 
     // Creates a department
-    createDepartment(department) {
+    createDepartment() {
         const department = inquirer.prompt([
             {
               name: 'name',
@@ -260,7 +259,7 @@ class Org {
     };
 
     // Deletes a department
-    deleteDepartmentById(departmentId) {
+    deleteDepartmentById() {
         const allDepartments = selectAllDepartments();
 
         const department = allDepartments.map(({ id, name }) => ({
@@ -268,7 +267,7 @@ class Org {
           value: id
         }));
       
-        const { departmentId } = await prompt({
+        const { departmentId } = inquirer.prompt({
           name: 'departmentId',
           message: 'Please select a department to remove: ',
           type: 'list',
@@ -281,7 +280,7 @@ class Org {
     };
 
     // Select all employees by department ID and joins with role DB
-    selectAllEmployeesByDepartmentId(departmentId) {
+    selectAllEmployeesByDepartmentId() {
         const department = selectAllDepartments().map(({ id, name }) => ({
           name: name,
           value: id

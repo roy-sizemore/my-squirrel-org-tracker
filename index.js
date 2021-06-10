@@ -7,6 +7,7 @@ const menu = () => {
             {
                 name: 'userInput',
                 message: 'Please select from the following: ',
+                type: 'list',
                 choices: [
                     'Display all employees',
                     'Display all employees by department',
