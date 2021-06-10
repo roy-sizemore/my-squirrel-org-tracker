@@ -25,39 +25,42 @@ inquirer
     ]).then((answer) => {
         switch(answer.userInput) {
             case 'Display all employees':
-                return Org.selectAllEmployees();
+                return selectAllEmployees();
 
             case 'Display all employees by department':
-                return Org.selectAllEmployeesByDepartmentId(departmentId);
+                return selectAllEmployeesByDepartmentId(departmentId);
             
             case 'Add an employee':
-                return Org.createEmployee(employee);
+                return createEmployee(employee);
             
             case 'Delete an employee':
-                return Org.deleteEmployeeById(employeeId);
+                return deleteEmployeeById(employeeId);
             
             case "Update an employee's role":
-                return Org.updateEmployeeRoleById(employeeId, roleId);
+                return updateEmployeeRoleById(employeeId, roleId);
             
             case "Update an employee's manager":
-                return Org.updateEmployeeManagerByIds(employeeId, managerId);
+                return updateEmployeeManagerByIds(employeeId, managerId);
 
             case 'Show all roles':
-                return Org.selectAllRoles();
+                return selectAllRoles();
 
             case 'Create new role':
-                return Org.createRole(role);
+                return createRole(role);
 
             case 'Delete role':
-                return Org.deleteRoleById(roleId);
+                return deleteRoleById(roleId);
 
             case 'Show all departments':
-                return Org.selectAllDepartments();
+                return selectAllDepartments();
 
             case 'Add a department':
-                return Org.createDepartment(department);
+                return createDepartment(department);
 
             case 'Delete a department':
-                return Org.deleteDepartmentById(departmentId);
-        }
+                return deleteDepartmentById(departmentId);
+
+            default:
+                process.exit();
+        };
     });
