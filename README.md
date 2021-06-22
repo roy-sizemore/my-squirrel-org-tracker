@@ -47,4 +47,4 @@
   GitHub: [roy-sizemore](https://github.com/roy-sizemore/)
 
   ## **Demo** (click to enlarge)
-  <br><img src="https://github.com/roy-sizemore/screenshots/blob/main/org_demo.gif" alt="demo" width="400px">
+  <br><img src="https://github.com/roy-sizemore/screenshots/blob/main/emp_tracker_demo.gif" alt="demo" width="400px">
